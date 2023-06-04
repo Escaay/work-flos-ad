@@ -1,0 +1,42 @@
+.menu-container{
+    background-color: #a4ea9e;
+    border-radius: 20px;
+    .keyFramesFunction(menuAnimation,{
+        0%{
+            transform: translate(0,0)
+        }
+        25%
+        {
+            transform: translate(65vw,0)
+        }
+        50%
+        {
+            transform: translate(65vw,65vh)
+        }
+        75%
+        {
+            transform: translate(0,65vh)
+        }
+        100%
+        {
+            transform: translate(0,0)
+        }
+    });
+    animation: menuAnimation 10s;
+    animation-iteration-count: infinite;
+    .menu{
+        li{
+            margin-right: 10px;
+            padding-right: 20px;
+            a:link{ color:white}/* 链接默认为白色 */
+            a:hover{ color:red}/* 鼠标悬停白色 */
+            a:active{ color:yellow}/* 鼠标点击与释放时白色 */
+            a:visited{ color:black}/* 访问过为白色 */
+        }
+    }
+}
+.keyFramesFunction(@name,@content){
+    @keyframes @name{
+        @content()
+    }
+}

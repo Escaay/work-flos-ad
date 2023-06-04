@@ -1,9 +1,9 @@
 {
-  "name": "antd-nav",
-  "displayName": "Antd nav",
-  "version": "0.0.1",
-  "description": "A basic Plasmo extension.",
-  "author": "27907",
+  "name": "work-flos-ad",
+  "displayName": "work-flows-ad",
+  "version": "1.0.0",
+  "description": "一个work-flos广告插件",
+  "author": "Escaay",
   "packageManager": "pnpm@8.6.0",
   "scripts": {
     "dev": "plasmo dev",
@@ -26,7 +26,7 @@
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*"
+      "https://workflos.ai/*"
     ]
   }
 }
