@@ -1,7 +1,11 @@
 # 快速开始
 ## yarn
 ## pnpm dev
-## 安装插件后打开 https://workflos.ai/,可以看到漂浮的广告插件
+## 安装插件后打开 https://workflos.ai/
+
+## 插件作用
+1. 漂浮的广告导航栏
+2. workflos页面背景色变为粉色
 
 # 目录结构
 
