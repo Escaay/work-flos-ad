@@ -1,33 +1,29 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+## pnpm create plasmo
+## npm create plasmo
 
-## Getting Started
+## pnpm dev 
+## npm run dev
 
-First, run the development server:
+## pnpm build
+## pnpm run build
 
-```bash
-pnpm dev
-# or
-npm run dev
-```
+##pnpm build -- --zip
+# OR
+npm run build -- --zip
+# OR
+plasmo build --zip
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+# 浏览器插件七大属性
+1.mainifest.json
+2.content-scripts(向页面注入js,css,但是不能访问页面的js,他和页面共享DOM,但不共享js,只能通过injected script,他只能访问四种chrome.api,1.extension,2.i18n,3.runtime,4.storage)
+3.injected-script(指的是通过DOM操作的方式向页面注入的一种JS)
+4.background(后台，一个html，常驻页面)
+5.event-pages(它的生命周期是：在被需要时加载，在空闲时被关闭，什么叫被需要时呢？比如第一次安装、插件更新、有content-script向它发送消息，等等。主要是怕background长时间挂载太消耗性能，比background多了一个persistent参数)
+6.popup交互页面（一个icon和一个html）
+7.homepage_url(作者网站链接)
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+# 创建content-scripts两种方式
+1.直接在源文件创建content.ts
+2.创建contents目录，在下面添加多个，每一个都是独立的（推荐）
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
-
-```bash
-pnpm build
-# or
-npm run build
-```
-
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
-
-## Submit to the webstores
-
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+![image](./construction.png)
