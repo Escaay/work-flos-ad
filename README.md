@@ -1,6 +1,7 @@
 # 快速开始
 ## yarn
-## yarn start
+## pnpm dev
+## 安装插件后打开 https://workflos.ai/,可以看到漂浮的广告插件
 
 # 目录结构
 
