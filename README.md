@@ -1,17 +1,10 @@
-## pnpm create plasmo
-## npm create plasmo
+# 快速开始
+## yarn
+## yarn start
 
-## pnpm dev 
-## npm run dev
+# 目录结构
 
-## pnpm build
-## pnpm run build
-
-##pnpm build -- --zip
-# OR
-npm run build -- --zip
-# OR
-plasmo build --zip
+![image](./construction.png)
 
 # 浏览器插件七大属性
 1.mainifest.json
@@ -25,5 +18,3 @@ plasmo build --zip
 # 创建content-scripts两种方式
 1.直接在源文件创建content.ts
 2.创建contents目录，在下面添加多个，每一个都是独立的（推荐）
-
-![image](./construction.png)
